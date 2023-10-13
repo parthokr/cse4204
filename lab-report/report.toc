@@ -1,0 +1,21 @@
+\contentsline {chapter}{\numberline {1}Implementation of Nearest Neighbor classification algorithm}{3}{}%
+\contentsline {section}{\numberline {1.1}Introduction}{3}{}%
+\contentsline {section}{\numberline {1.2}Preparing the dataset}{4}{}%
+\contentsline {subsection}{\numberline {1.2.1}Foreword}{4}{}%
+\contentsline {subsection}{\numberline {1.2.2}Selecting dataset}{4}{}%
+\contentsline {subsection}{\numberline {1.2.3}Loading the dataset}{4}{}%
+\contentsline {subsection}{\numberline {1.2.4}Characteristics of the dataset}{5}{}%
+\contentsline {subsection}{\numberline {1.2.5}Preprocessing the dataset}{6}{}%
+\contentsline {subsection}{\numberline {1.2.6}Selecting the features and the output}{7}{}%
+\contentsline {subsection}{\numberline {1.2.7}Splitting the dataset into training and test sets}{7}{}%
+\contentsline {section}{\numberline {1.3}Implementing the k-NN algorithm}{8}{}%
+\contentsline {subsection}{\numberline {1.3.1}Selecting the value of k}{8}{}%
+\contentsline {subsection}{\numberline {1.3.2}Calculating the distance between two samples}{8}{}%
+\contentsline {subsection}{\numberline {1.3.3}Training the model}{8}{}%
+\contentsline {subsection}{\numberline {1.3.4}Predicting the output}{9}{}%
+\contentsline {section}{\numberline {1.4}Calculating the accuracy of the model}{9}{}%
+\contentsline {subsection}{\numberline {1.4.1}Confusion matrix}{9}{}%
+\contentsline {subsection}{\numberline {1.4.2}Accuracy score and f1 score}{10}{}%
+\contentsline {subsection}{\numberline {1.4.3}Relation between the value of \textit {k} and the accuracy of the model}{10}{}%
+\contentsline {section}{\numberline {1.5}Drawbacks of the k-NN algorithm}{11}{}%
+\contentsline {section}{\numberline {1.6}Conclusion}{12}{}%
