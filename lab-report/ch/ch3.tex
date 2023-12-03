@@ -81,16 +81,16 @@ We will be using the first 30 columns of the dataset as the features and the las
     where $\eta$ is the learning rate.\\\\
 \end{enumerate}
 \subsection{Necessary imports}
-\begin{lstlisting}[language=Python]
+\begin{minted}{Python}
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, 
                             accuracy_score, 
                             f1_score
-\end{lstlisting}
+\end{minted}
 \subsection{Implementing the algorithm}
-\begin{lstlisting}[language=Python]
+\begin{minted}{python}
     class MLP:
     def __init__(self, 
         num_inputs, 
@@ -207,7 +207,7 @@ from sklearn.metrics import confusion_matrix,
         for i in range(len(X)):
             y_pred.append(self.forward_propagate(X[i]))
         return np.array(y_pred).round()
-\end{lstlisting}
+\end{minted}
 \subsection{Splitting the dataset into training and test sets}
 We will be using the \textit{scikit-learn} library to split the dataset into training and test sets. We will use the following code snippet to split the dataset into training and test sets:
 \begin{lstlisting}[language=Python]
@@ -323,4 +323,8 @@ Accuracy score: 1.0
 
 
 \section{Conclusion}
-In this lab, we have implemented the MLP algorithm from scratch. We have also used the MLP algorithm to solve the XOR problem. We have also visualized the results of the MLP algorithm.\\
+
+
+
+
+
