@@ -1,21 +1,24 @@
-\contentsline {chapter}{\numberline {1}Implementation of Nearest Neighbor classification algorithm}{3}{}%
-\contentsline {section}{\numberline {1.1}Introduction}{3}{}%
-\contentsline {section}{\numberline {1.2}Preparing the dataset}{4}{}%
-\contentsline {subsection}{\numberline {1.2.1}Foreword}{4}{}%
-\contentsline {subsection}{\numberline {1.2.2}Selecting dataset}{4}{}%
-\contentsline {subsection}{\numberline {1.2.3}Loading the dataset}{4}{}%
-\contentsline {subsection}{\numberline {1.2.4}Characteristics of the dataset}{5}{}%
-\contentsline {subsection}{\numberline {1.2.5}Preprocessing the dataset}{6}{}%
-\contentsline {subsection}{\numberline {1.2.6}Selecting the features and the output}{7}{}%
-\contentsline {subsection}{\numberline {1.2.7}Splitting the dataset into training and test sets}{7}{}%
-\contentsline {section}{\numberline {1.3}Implementing the k-NN algorithm}{8}{}%
-\contentsline {subsection}{\numberline {1.3.1}Selecting the value of k}{8}{}%
-\contentsline {subsection}{\numberline {1.3.2}Calculating the distance between two samples}{8}{}%
-\contentsline {subsection}{\numberline {1.3.3}Training the model}{8}{}%
-\contentsline {subsection}{\numberline {1.3.4}Predicting the output}{9}{}%
-\contentsline {section}{\numberline {1.4}Calculating the accuracy of the model}{9}{}%
-\contentsline {subsection}{\numberline {1.4.1}Confusion matrix}{9}{}%
-\contentsline {subsection}{\numberline {1.4.2}Accuracy score and f1 score}{10}{}%
-\contentsline {subsection}{\numberline {1.4.3}Relation between the value of \textit {k} and the accuracy of the model}{10}{}%
-\contentsline {section}{\numberline {1.5}Drawbacks of the k-NN algorithm}{11}{}%
-\contentsline {section}{\numberline {1.6}Conclusion}{12}{}%
+\contentsline {chapter}{\numberline {3}Design and implementation of Kohonen Self-organizing neural network}{4}{}%
+\contentsline {section}{\numberline {3.1}Introduction}{4}{}%
+\contentsline {section}{\numberline {3.2}About the dataset}{4}{}%
+\contentsline {subsection}{\numberline {3.2.1}Foreword}{4}{}%
+\contentsline {subsection}{\numberline {3.2.2}Preprocessing the dataset}{5}{}%
+\contentsline {subsection}{\numberline {3.2.3}Selecting the features and the output}{5}{}%
+\contentsline {section}{\numberline {3.3}Implementing the algorithm}{5}{}%
+\contentsline {subsection}{\numberline {3.3.1}Algotihm for Kohonen Self-organizing neural network}{5}{}%
+\contentsline {subsection}{\numberline {3.3.2}Necessary imports}{6}{}%
+\contentsline {subsection}{\numberline {3.3.3}Implementing the algorithm}{6}{}%
+\contentsline {subsection}{\numberline {3.3.4}Splitting the dataset into training and test sets}{8}{}%
+\contentsline {section}{\numberline {3.4}Training the model and evaluating the performance}{8}{}%
+\contentsline {subsection}{\numberline {3.4.1}Training the model}{8}{}%
+\contentsline {subsection}{\numberline {3.4.2}Accuracy of the model}{9}{}%
+\contentsline {subsection}{\numberline {3.4.3}Output}{9}{}%
+\contentsline {section}{\numberline {3.5}Visualization of the results}{9}{}%
+\contentsline {subsection}{\numberline {3.5.1}Scatter plot of predicted and test data}{9}{}%
+\contentsline {subsection}{\numberline {3.5.2}Confusion Matrix}{11}{}%
+\contentsline {section}{\numberline {3.6}Design and implementation of Hopfield neural network}{12}{}%
+\contentsline {section}{\numberline {3.7}Introduction}{12}{}%
+\contentsline {section}{\numberline {3.8}Implementing the algorithm}{12}{}%
+\contentsline {subsection}{\numberline {3.8.1}Training and testing the model}{13}{}%
+\contentsline {subsection}{\numberline {3.8.2}Output}{13}{}%
+\contentsline {section}{\numberline {3.9}Conclusion}{13}{}%

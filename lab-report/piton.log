@@ -1,0 +1,116 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  29 NOV 2023 15:09
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**piton.ins
+(./piton.ins
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/l3docstrip.tex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count185
+\emptyLines=\count186
+\processedLines=\count187
+\commentsRemoved=\count188
+\commentsPassed=\count189
+\codeLinesPassed=\count190
+\TotalprocessedLines=\count191
+\TotalcommentsRemoved=\count192
+\TotalcommentsPassed=\count193
+\TotalcodeLinesPassed=\count194
+\NumberOfFiles=\count195
+\inFile=\read2
+\inputcheck=\read3
+\off@0=\count196
+\off@1=\count197
+\off@2=\count198
+\off@3=\count199
+\off@4=\count266
+\off@5=\count267
+\off@6=\count268
+\off@7=\count269
+\off@8=\count270
+\off@9=\count271
+\off@10=\count272
+\off@11=\count273
+\off@12=\count274
+\off@13=\count275
+\off@14=\count276
+\off@15=\count277
+\@maxfiles=\count278
+\@maxoutfiles=\count279
+
+Utility: `docstrip' v2.6b <2022-09-03>
+English documentation    <2022-09-03>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)) File ./piton.sty already exists on the system.
+Overwrite it? [y/n]
+\answer=y
+
+Generating file(s) ./piton.sty 
+\openout0 = `./piton.sty'.
+
+
+Processing file piton.dtx (STY) -> piton.sty
+Lines  processed: 7262
+Comments removed: 4417
+Comments  passed: 0
+Codelines passed: 2834
+
+File ./piton.lua already exists on the system.
+Overwrite it? [y/n]
+\answer=y
+
+Generating file(s) ./piton.lua 
+\openout0 = `./piton.lua'.
+
+
+Processing file piton.dtx (LUA) -> piton.lua
+Lines  processed: 7262
+Comments removed: 4417
+Comments  passed: 0
+Codelines passed: 2834
+
+*********************************************************
+*
+* To finish the installation you have to move the
+* following files into a directory searched by TeX:
+*
+*   piton.sty, piton.lua
+*
+* To produce the documentation run the file piton.dtx
+* through LuaLaTeX.
+*
+* Happy TeXing!
+*********************************************************
+Overall statistics:
+Files  processed: 2
+Lines  processed: 14524
+Comments removed: 8834
+Comments  passed: 0
+Codelines passed: 5668
+ ) 
+Here is how much of TeX's memory you used:
+ 351 strings out of 476025
+ 3770 string characters out of 5790016
+ 1849388 words of memory out of 5000000
+ 20894 multiletter control sequences out of 15000+600000
+ 512287 words of font info for 32 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 13i,0n,15p,348b,133s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

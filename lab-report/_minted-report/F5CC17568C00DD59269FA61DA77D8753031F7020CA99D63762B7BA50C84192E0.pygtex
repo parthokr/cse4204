@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{class} \PYG{n+nc}{HopfieldNetwork}\PYG{p}{:}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{n}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n} \PYG{o}{=} \PYG{n}{n}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{threshold} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+    \PYG{k}{def} \PYG{n+nf}{fit}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{X}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{((}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{))}
+        \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{X}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights} \PYG{o}{+=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{outer}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights}\PYG{p}{)}
+        \PYG{c+c1}{\PYGZsh{} self.weights /= self.n}
+        \PYG{n}{np}\PYG{o}{.}\PYG{n}{fill\PYGZus{}diagonal}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{threshold} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+    \PYG{k}{def} \PYG{n+nf}{predict}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{x}\PYG{p}{):}
+        \PYG{n}{y} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{threshold}
+        \PYG{n}{y}\PYG{p}{[}\PYG{n}{y} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}
+        \PYG{n}{y}\PYG{p}{[}\PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+        \PYG{k}{return} \PYG{n}{y}
+\end{Verbatim}

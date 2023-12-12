@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class} \PYG{n+nc}{KSOFM}\PYG{p}{:}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}
+        \PYG{n+nb+bp}{self}\PYG{p}{,}
+        \PYG{n}{num\PYGZus{}input}\PYG{p}{,}
+        \PYG{n}{num\PYGZus{}output}\PYG{p}{,}
+        \PYG{n}{learning\PYGZus{}rate}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{,}
+        \PYG{n}{epochs}\PYG{o}{=}\PYG{l+m+mi}{100}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{num\PYGZus{}input} \PYG{o}{=} \PYG{n}{num\PYGZus{}input}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{num\PYGZus{}output} \PYG{o}{=} \PYG{n}{num\PYGZus{}output}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{learning\PYGZus{}rate} \PYG{o}{=} \PYG{n}{learning\PYGZus{}rate}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{rand}\PYG{p}{(}\PYG{n}{num\PYGZus{}output}\PYG{p}{,} \PYG{n}{num\PYGZus{}input}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{epochs} \PYG{o}{=} \PYG{n}{epochs}
+
+    \PYG{k}{def} \PYG{n+nf}{train}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{X}\PYG{p}{):}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{epochs}\PYG{p}{):}
+            \PYG{k}{for} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{X}\PYG{p}{):}
+                \PYG{c+c1}{\PYGZsh{} print(x)}
+                \PYG{c+c1}{\PYGZsh{} print(self.weights)}
+                \PYG{c+c1}{\PYGZsh{} Calculate the distance between the}
+                \PYG{c+c1}{\PYGZsh{} input vector and each weight vector}
+                \PYG{n}{distances} \PYG{o}{=}
+                \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights} \PYG{o}{\PYGZhy{}} \PYG{n}{x}\PYG{p}{,} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+                \PYG{c+c1}{\PYGZsh{} print(distances)}
+                \PYG{c+c1}{\PYGZsh{} Find the index of the winning neuron}
+                \PYG{n}{winner} \PYG{o}{=}
+                \PYG{n}{np}\PYG{o}{.}\PYG{n}{argmin}\PYG{p}{(}\PYG{n}{distances}\PYG{p}{)}
+                \PYG{c+c1}{\PYGZsh{} Update the weights of the winning neuron}
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights}\PYG{p}{[}\PYG{n}{winner}\PYG{p}{]} \PYG{o}{+=}
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{learning\PYGZus{}rate} \PYG{o}{*}
+                    \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights}\PYG{p}{[}\PYG{n}{winner}\PYG{p}{])}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}Epoch }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{, Weights }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights}
+
+    \PYG{k}{def} \PYG{n+nf}{predict}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{X}\PYG{p}{):}
+        \PYG{n}{y\PYGZus{}pred} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{k}{for} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{X}\PYG{p}{):}
+            \PYG{n}{distances} \PYG{o}{=}
+            \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weights} \PYG{o}{\PYGZhy{}} \PYG{n}{x}\PYG{p}{,} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{n}{winner} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{argmin}\PYG{p}{(}\PYG{n}{distances}\PYG{p}{)}
+            \PYG{n}{y\PYGZus{}pred}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{winner}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{y\PYGZus{}pred}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{ksofm} \PYG{o}{=} \PYG{n}{KSOFM}\PYG{p}{(}\PYG{l+m+mi}{30}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{learning\PYGZus{}rate}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{n}{epochs}\PYG{o}{=}\PYG{l+m+mi}{3000}\PYG{p}{)}
+    \PYG{n}{w} \PYG{o}{=} \PYG{n}{ksofm}\PYG{o}{.}\PYG{n}{train}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{)}
+    \PYG{n}{pred} \PYG{o}{=} \PYG{n}{ksofm}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{n}{X\PYGZus{}test}\PYG{p}{)}
+\end{Verbatim}

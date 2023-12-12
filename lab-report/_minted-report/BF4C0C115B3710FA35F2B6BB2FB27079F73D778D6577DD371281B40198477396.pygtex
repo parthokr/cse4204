@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}
+        \PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}breast\PYGZhy{}cancer\PYGZhy{}wisconsin\PYGZhy{}data\PYGZus{}data.csv\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}diagnosis\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}diagnosis\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+
+    \PYG{n}{X} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{iloc}\PYG{p}{[:,} \PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{32}\PYG{p}{]}
+    \PYG{n}{y} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{iloc}\PYG{p}{[:,} \PYG{l+m+mi}{1}\PYG{p}{]}
+    \PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+    \PYG{n}{y} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+
+    \PYG{n}{X\PYGZus{}train}\PYG{p}{,}
+    \PYG{n}{X\PYGZus{}test}\PYG{p}{,}
+    \PYG{n}{y\PYGZus{}train}\PYG{p}{,}
+    \PYG{n}{y\PYGZus{}test} \PYG{o}{=} \PYG{n}{train\PYGZus{}test\PYGZus{}split}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{test\PYGZus{}size}\PYG{o}{=}\PYG{l+m+mf}{0.2}\PYG{p}{)}
+\end{Verbatim}
